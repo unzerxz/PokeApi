@@ -1,75 +1,81 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PokeDex</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
+
     <header>
-        <div class="BannerLogo">
-            <img id="logoPokedex" src="img/logo_pokedex 2.png" alt="">
-            <img id="pokebol" src="img/image5.png" alt="">
-        </div>
-    </header>
-
-    <nav id="nav-bar">
-        <div id="content-nav">
-            <figure id="figura">
-                <img id="icon" src="img/ico_pokedex 1.png" alt="">
-                <figcaption id="numeroPokemon">1992</figcaption>
-            </figure>
-            <div id="pesquisa">
-                <p id="box-pesquisa">Quem é esse pokemon?</p>
-                <div id="input-pesquisa">
-                    <input type="text" placeholder="informe o nome" id="caixa-de-texto">
-                    <button id="btn-pesquisa"><img src="img/Vector.png" alt="botao de pesquisa"></button>
+        <nav class="nav">
+            <div id="header">
+                <div id="logo">
+                    <img src="img/logo_pokedex 2.png" alt="Logo">
+                </div>
+                <div id="search-bar">
+                    <input type="text" id="inputPesquisa" placeholder="Pesquisar por ID ou nome">
+                    <button id="btnPesquisar">Pesquisar</button>
                 </div>
             </div>
-        </div>
-    </nav>
-    <main>
-        <div class="pokeContainer" id="pokeContainer">
-            <div class="pokemon">
-                <ul>
-                    <li>
-                        <div class="imgContainer">
-                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-                                alt="Nome">
-                        </div>
-                        <div class="info">
-
-                    <li class="number">#1</li>
-                    <h3 class="name">Bulbassar</h3>
-                    <li class="type">Type: <span>Grass</span></li>
-
-            </div>
-            </li>
+            
+            <ul class="nav-list">
+                <li class="nav-item"><button class="btn btn-header" id="ver-todos">Ver todos</button></li>
+                <li class="nav-item"><button class="btn btn-header normal" id="normal">Normal</button></li>
+                <li class="nav-item"><button class="btn btn-header fire" id="fire">Fire</button></li>
+                <li class="nav-item"><button class="btn btn-header water" id="water">Water</button></li>
+                <li class="nav-item"><button class="btn btn-header grass" id="grass">Grass</button></li>
+                <li class="nav-item"><button class="btn btn-header electric" id="electric">Electric</button></li>
+                <li class="nav-item"><button class="btn btn-header ice" id="ice">Ice</button></li>
+                <li class="nav-item"><button class="btn btn-header fighting" id="fighting">Fighting</button></li>
+                <li class="nav-item"><button class="btn btn-header poison" id="poison">Poison</button></li>
+                <li class="nav-item"><button class="btn btn-header ground" id="ground">Ground</button></li>
+                <li class="nav-item"><button class="btn btn-header flying" id="flying">Flying</button></li>
+                <li class="nav-item"><button class="btn btn-header psychic" id="psychic">Psychic</button></li>
+                <li class="nav-item"><button class="btn btn-header bug" id="bug">Bug</button></li>
+                <li class="nav-item"><button class="btn btn-header rock" id="rock">Rock</button></li>
+                <li class="nav-item"><button class="btn btn-header ghost" id="ghost">Ghost</button></li>
+                <li class="nav-item"><button class="btn btn-header dark" id="dark">Dark</button></li>
+                <li class="nav-item"><button class="btn btn-header dragon" id="dragon">Dragon</button></li>
+                <li class="nav-item"><button class="btn btn-header steel" id="steel">Steel</button></li>
+                <li class="nav-item"><button class="btn btn-header fairy" id="fairy">Fairy</button></li>
             </ul>
-        </div>
-        </div>
+        </nav>
+    </header>
+    <main>
 
-        <div class="pokeContainer" id="pokeContainer">
-            <div class="pokemon">
-                <div class="imgContainer">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-                        alt="Nome">
-                </div>
-                <div class="info">
-                    <ul>
-                        <li class="number">#1</li>
-                        <h3 class="name">Bulbassar</h3>
-                        <li class="type">Type: <span>Grass</span></li>
-                    </ul>
-                </div>
+        <div id="todos">
+            <div class="pokemon-todos" id="listaPokemon">
+                <!-- <div class="pokemon">
+                    <p class="pokemon-id-back">#025</p>
+                    <div class="pokemon-imagen">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pikachu">
+                    </div>
+                    <div class="pokemon-info">
+                        <div class="nombre-contenedor">
+                            <p class="pokemon-id">#025</p>
+                            <h2 class="pokemon-nombre">Pikachu</h2>
+                        </div>
+                        <div class="pokemon-tipos">
+                            <p class="electric tipo">ELECTRIC</p>
+                            <p class="fighting tipo">FIGHTING</p>
+                        </div>
+                        <div class="pokemon-stats">
+                            <p class="stat">4m</p>
+                            <p class="stat">60kg</p>
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </div>
+
     </main>
 
-    <script src="js/script.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
