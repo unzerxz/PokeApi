@@ -289,3 +289,55 @@ main {
     background-color: var(--type-fairy);
     color: var(--clr-black);
 }
+
+#header {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    margin-right: 20px;
+    /* Espaçamento entre a logo e a barra de pesquisa */
+}
+
+#search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    /* Cor de fundo da barra de pesquisa */
+    padding: 10px;
+    /* Espaçamento interno da barra de pesquisa */
+    border-radius: 5px;
+    /* Borda arredondada */
+}
+
+#inputPesquisa {
+    flex: 1;
+    /* Preenche o espaço disponível */
+    border: none;
+    /* Remove a borda padrão */
+    padding: 8px;
+    /* Espaçamento interno do campo de pesquisa */
+    font-size: 16px;
+}
+
+#btnPesquisar {
+    background-color: #007bff;
+    /* Cor de fundo do botão */
+    color: white;
+    /* Cor do texto do botão */
+    border: none;
+    /* Remove a borda padrão */
+    border-radius: 5px;
+    /* Borda arredondada */
+    padding: 10px 20px;
+    /* Espaçamento interno do botão */
+    font-size: 16px;
+    cursor: pointer;
+    /* Altera o cursor ao passar sobre o botão */
+}
+
+#btnPesquisar:hover {
+    background-color: #0056b3;
+    /* Cor de fundo do botão ao passar o mouse */
+}
