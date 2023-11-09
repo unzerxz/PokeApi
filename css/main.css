@@ -303,7 +303,7 @@ main {
 #search-bar {
     display: flex;
     align-items: center;
-    background-color: #f1f1f1;
+    background-color: #F1F1F1;
     /* Cor de fundo da barra de pesquisa */
     padding: 10px;
     /* Espaçamento interno da barra de pesquisa */
@@ -322,7 +322,7 @@ main {
 }
 
 #btnPesquisar {
-    background-color: #007bff;
+    background-color: #c5c5c5;
     /* Cor de fundo do botão */
     color: white;
     /* Cor do texto do botão */
@@ -340,4 +340,29 @@ main {
 #btnPesquisar:hover {
     background-color: #0056b3;
     /* Cor de fundo do botão ao passar o mouse */
+}
+
+.loading {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

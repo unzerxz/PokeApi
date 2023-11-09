@@ -1,12 +1,32 @@
 const listaPokemon = document.querySelector("#listaPokemon");
 const botonesHeader = document.querySelectorAll(".btn-header");
-let URL = "https://pokeapi.co/api/v2/pokemon/";
+const URL = "https://pokeapi.co/api/v2/pokemon/";
+const numeroDePokemons = 898;
+const loadingIndicator = document.getElementById('loading');
 
-for (let i = 1; i <= 151; i++) {
-    fetch(URL + i)
-        .then((response) => response.json())
-        .then(data => mostrarPokemon(data))
+function getPokemonData(i) {
+    return fetch(URL + i)
+        .then((response) => response.json());
 }
+
+function carregarTodosPokemons() {
+    loadingIndicator.style.display = 'block';
+
+    const promises = [];
+
+    for (let i = 1; i <= numeroDePokemons; i++) {
+        promises.push(getPokemonData(i));
+    }
+
+    return Promise.all(promises)
+        .then(pokemons => {
+            pokemons.forEach(mostrarPokemon);
+            loadingIndicator.style.display = 'none';
+        });
+}
+
+carregarTodosPokemons()
+    .then(pokemons => pokemons.forEach(mostrarPokemon));
 
 const inputPesquisa = document.querySelector("#inputPesquisa");
 const btnPesquisar = document.querySelector("#btnPesquisar");
@@ -16,7 +36,7 @@ btnPesquisar.addEventListener("click", () => {
 
     listaPokemon.innerHTML = ""; // Limpa a lista atual
 
-    for (let i = 1; i <= 151; i++) {
+    for (let i = 1; i <= numeroDePokemons; i++) {
         fetch(URL + i)
             .then((response) => response.json())
             .then(data => {
@@ -72,7 +92,7 @@ botonesHeader.forEach(boton => boton.addEventListener("click", (event) => {
 
     listaPokemon.innerHTML = "";
 
-    for (let i = 1; i <= 151; i++) {
+    for (let i = 1; i <= numeroDePokemons; i++) {
         fetch(URL + i)
             .then((response) => response.json())
             .then(data => {
